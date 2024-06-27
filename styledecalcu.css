@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    background-image: linear-gradient(to right, #ffa6fc,#050505);
+    font-family: arial sans-serif;
+    color:rgb(0, 0, 0);
+    margin: 20px;
+}
+p {
+    font-size: 20px;
+}
+h1 {
+    color:pink
+}
+div {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 20px 35px;
+    margin: 5px;
+    background-color: rgb(255, 1, 221);
+    color:rgb(0, 0, 0);
+    border-style: double;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: aquamarine;
+}
+.num-list {
+    background-color: #fc92ee;
+    display: flex; /* Diseño en fila */
+    flex-wrap: wrap; /* Envuelve los elementos */
+    justify-content: center; /* Alinea al centro */
+    padding: 1rem; /* Espaciado interno */
+}
+.border-example {
+    border: 5px solid #bb47b1;
+    border-radius: 25px 10px 25px 10px;
+    border-style: double;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 10px 15px 20px #fc92ee;
+}

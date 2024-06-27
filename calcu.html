@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA DE SUMA Y RESTA</title>
+    <link rel="stylesheet" href="styledecalcu.css">
+</head>
+<body>
+    <h1>Calculadora de Suma y Resta</h1>
+    <div id="valueButtons1">
+        <h3>Seleccione el Valor de 1:</h3>
+        <button onclick="setValue(1,1)">1</button>
+        <button onclick="setValue(1,2)">2</button>
+        <button onclick="setValue(1,3)">3</button>
+        <!--puedes agregar mas botones segun sea necesario-->
+    </div>
+    <p>valor 1 seleccionado: <span id="selectedValue1">0</span></p>
+    
+    <div id="valueButtons2">
+        <h3>Seleccione el Valor de 1:</h3>
+        <button onclick="setValue(2,1)">1</button>
+        <button onclick="setValue(2,2)">2</button>
+        <button onclick="setValue(2,3)">3</button>
+        <!--puedes agregar mas botones segun sea necesario-->
+        <p>valor 2 seleccionado: <span id="selectedValue2">0</span></p>
+
+    <div id="operationButtons">
+         <h3>seleccina la operacion</h3>
+         <button onclick="setOperation('sum')">Suma</button>
+         <button onclick="setOperation('subtract')">Resta</button>
+    </div>
+    <p>operacion seleccionada: <span id="selectedOperation">suma</span></p>
+
+    
+    <br>
+    <button onclick="calculateResult()">Calcular</button>
+    <h2>resultado: <span id="result">0</span></h2>
+    <script src="calcu.js"></script>
+</body>
+</html>
