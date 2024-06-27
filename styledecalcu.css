@@ -1,42 +1,73 @@
 body {
-    background-color: black;
-    background-image: linear-gradient(to right, #ffa6fc,#050505);
-    font-family: arial sans-serif;
-    color:rgb(0, 0, 0);
-    margin: 20px;
+    background-color: #ff60e4;
+    background-image: linear-gradient(to right, #ff80fb,#8a5a87);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
 }
-p {
-    font-size: 20px;
+
+.calculadora {
+    background-color: #ff98f6;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 320px;
 }
-h1 {
-    color:pink
+
+.display {
+    background-color: #000000;
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+    color: white;
+    box-sizing: border-box;
 }
-div {
-    margin-bottom: 20px;
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
 }
 
 button {
-    padding: 20px 35px;
-    margin: 5px;
-    background-color: rgb(255, 1, 221);
-    color:rgb(0, 0, 0);
-    border-style: double;
+    background-color: #ff1ed9;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    padding: 20px;
     cursor: pointer;
-    font-size: 18px;
+    transition: background-color;
 }
 
 button:hover {
-    background-color: aquamarine;
+    border-color: #ff1ed9;
+    background-color: #fcaaff;
 }
-.num-list {
-    background-color: #fc92ee;
-    display: flex; /* Diseño en fila */
-    flex-wrap: wrap; /* Envuelve los elementos */
-    justify-content: center; /* Alinea al centro */
-    padding: 1rem; /* Espaciado interno */
+
+button:active {
+    background-color: #999;
+}
+
+button:nth-child(4n) {
+    background-color: rgb(245, 169, 232);
+}
+
+button:nth-child(4n):hover {
+    border-color: #ff1ed9;
+    background-color: rgb(253, 137, 247);
+}
+
+button:nth-child(4n):active {
+    background-color: #f88;
+    border-color: #ff1ed9;
 }
 .border-example {
-    border: 5px solid #bb47b1;
+    border: 5px solid #ff62f2;
     border-radius: 25px 10px 25px 10px;
     border-style: double;
     padding: 20px;

@@ -1,25 +1,25 @@
 let value1 = '';
 let value2 = '';
-let operation = 'sum'; // Por defecto, la operación es suma
+let operation = null;
 
-function agregarNumero(variable, value) {
-    if (variable === 1) {
+function agregarNumero(value) {
+    if (operation === null) {
         value1 += value;
-        document.getElementById('selectedValue1').textContent = value1;
-    } else if (variable === 2) {
+        document.getElementById('result').textContent = value1;
+    } else {
         value2 += value;
-        document.getElementById('selectedValue2').textContent = value2;
+        document.getElementById('result').textContent = value2;
     }
 }
 
 function setOperation(op) {
     operation = op;
     document.getElementById('selectedOperation').textContent =
-        (operation === 'sum') ? 'Suma' : 
-        (operation === 'mul') ? 'Multiplicacion' : 
-        (operation === 'div') ? 'Division' : 
-        (operation === 'subtract') ? 'Resta' : 
-        'Operacion desconocida';
+        (operation === 'sum') ? '+' :
+        (operation === 'mul') ? '*' :
+        (operation === 'div') ? '/' :
+        (operation === 'subtract') ? '-' :
+        'Operación desconocida';
 }
 
 function calculateResult() {
@@ -36,7 +36,9 @@ function calculateResult() {
         result = num1 * num2;
     }
     document.getElementById('result').textContent = result;
+    operation = 'calculate';
 }
+
 function limpiarNumeros() {
     value1 = '';
     value2 = ''; 
